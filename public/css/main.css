@@ -1,0 +1,637 @@
+
+
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 0 32px;
+    height: 70px;
+    position: relative;
+    flex-wrap: nowrap;
+    min-width: 0;
+}
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.menu-btn {
+    font-size: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+.header-search{
+    position: relative;
+    width:500px;
+}
+
+
+.header-search button {
+ position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: gray;
+  margin-right: 5px;
+  background-color: white;
+  border: none;
+
+}
+.header-right {
+    display: flex;
+    align-items: center;
+}
+.create-exam-btn {
+    background: #ff5722;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 28px;
+    font-size: 18px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+.create-exam-btn:hover {
+    background: #e64a19;
+}
+.side-menu {
+    display: none;
+    position: absolute;
+    top: 70px;
+  
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    border-radius: 8px;
+    min-width: 200px;
+    z-index: 10;
+    border:1px solid black;
+    animation: slideDown 0.3s ease-out;
+}
+.side-menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+}
+.side-menu-list li {
+    padding: 10px 30px;
+    border:1px solid black
+}
+.side-menu-list a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    display: block;
+    transition: color 0.2s;
+}
+.side-menu-list a:hover {
+    color: #007bff;
+}
+.side-menu {
+  position: absolute;
+  top: 60px; /* cao bằng header */
+  left: 20px;
+  display: none;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  z-index: 10;
+  overflow: hidden;
+}
+
+.side-menu.show {
+  display: block;
+}
+
+.side-menu-list li {
+  list-style: none;
+  border-bottom: 1px solid black;
+}
+
+
+.side-menu-list a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #000;
+}
+
+
+#main-content-h5{
+    font-size: 20px;
+    color: black;
+    font-family: 'Kadwa', 'Roboto', sans-serif;
+    font-weight:350;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+#timkiem{
+    width: 200px;
+    border: 1px solid black;
+}
+.lichthi table{
+    width: 100%;
+    border:1px solid black;
+    
+}
+.lichthi table tr th{
+    text-align: center;
+    width: 150px;
+    font-size:20px;
+}
+.lichthi table tr th:not(:last-child){
+    border-right: 1px solid black;
+    
+}
+
+
+/**************
+LOGIN ADMIN
+***************/
+/* 🌟 Khung tổng */
+#landing-all {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+}
+
+/* 🌟 Form đăng nhập admin */
+#login-admin {
+    border: 1px solid #ccc;
+    padding: 40px 60px;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* 🌟 Tiêu đề form */
+#login-admin h5 {
+    text-align: center;
+    font-size: 26px;
+    font-family: 'Times New Roman', serif;
+    color: #333;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+/* 🌟 Bảng chứa input */
+#login-admin table {
+    border: none;
+}
+
+#login-admin td {
+    padding: 8px 0;
+    font-size: 18px;
+    color: #000;
+    font-family: 'Times New Roman', serif;
+}
+
+/* 🌟 Input */
+#login-admin input[type="text"],
+#login-admin input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+#login-admin input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 6px rgba(0, 123, 255, 0.3);
+}
+
+/* 🌟 Nút Login */
+#admin-login-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#admin-login-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* 🌟 Footer chứa nút User/Admin */
+#landing-footer {
+    margin-top: 30px;
+    text-align: center;
+}
+
+#landing-footer button {
+    background-color: #fff;
+    color: black;
+    border: 2px solid gray;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 10px 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#landing-footer button:hover {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+}
+
+/****************
+LOGIN USER (Đồng nhất với ADMIN)
+****************/
+#login-user {
+    border: 1px solid #ccc;
+    padding: 40px 60px;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* 🌟 Hiệu ứng giống admin */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* 🌟 Tiêu đề form */
+#login-user h5 {
+    text-align: center;
+    font-size: 26px;
+    font-family: 'Times New Roman', serif;
+    color: #333;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+/* 🌟 Bảng chứa input */
+#login-user table {
+    border: none;
+    width: 100%;
+}
+
+#login-user td {
+    padding: 8px 0;
+    font-size: 18px;
+    color: #000;
+    font-family: 'Times New Roman', serif;
+}
+
+/* 🌟 Input */
+#login-user input[type="text"],
+#login-user input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+#login-user input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 6px rgba(0, 123, 255, 0.3);
+}
+
+/* 🌟 Liên kết “Forgot password” */
+#forgot-link {
+    display: inline-block;
+    font-size: 15px;
+    color: #ff5722;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+#forgot-link:hover {
+    text-decoration: underline;
+    color: #e64a19;
+}
+
+/* 🌟 Nút Login */
+#login-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 150px;
+}
+
+#login-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+
+/****************
+LANDING-FOOTER
+****************/
+/* 🌟 FOOTER có hiệu ứng giống landing-all nhưng không có nền */
+#landing-footer {
+    padding: 20px 40px;
+    margin-top: 30px;
+    animation: fadeInUp 1.2s ease;
+    text-align: center;
+    background: none; 
+}
+
+/* Hiệu ứng trượt lên khi xuất hiện */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Nút trong footer */
+#landing-footer button {
+    background-color: white;
+    color: black;
+    border: 1px solid gray;
+    border-radius: 15px;
+    padding: 10px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgb(73, 73, 223);
+}
+
+#landing-footer button:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+}
+
+
+/****************
+FORM QUÊN MẬT KHẨU
+*****************/
+   #forgot_password h1 {
+            color: black;
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            margin-bottom: 20px;
+            margin-top: -1rem;
+        }
+
+        #forgot_password {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 1px solid #ccc;
+            padding: 50px 70px;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 350px;
+        }
+
+        #forgot-password table {
+            width: 100%;
+            text-align: left;
+        }
+        #emailmypassword {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+        .btn-right {
+            text-align: right;
+        }
+
+        .btn-right button {
+            margin-top: 30px;
+           padding: 10px 25px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: 0.3s;
+            width: 350px;
+            height: 40px;
+        }
+
+        .btn-right button:hover {
+            background-color: #0056b3;
+            transform: translateX(3px);
+        }
+
+        .btn-right button::after {
+            content: "➜";
+            font-weight: bold;
+        }
+       
+    .link-center {
+            text-align: center;
+            padding-top: 15px;
+            
+        }
+        .link-center a{
+             text-decoration: none;
+            color: black;
+            font-size: 14px;
+            font-style: italic;
+            margin-top: 5px;
+        }
+
+/******************
+FORM ĐỔI MẬT KHẨU
+******************/
+ .header-title-pw {
+            margin-top: 5rem;
+            text-align: center;
+            flex: 1 1 auto;
+            font-family: 'Kadwa', 'Roboto', sans-serif;
+            font-size: 40px;
+            font-weight: 700;
+            color: #007bff;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        #formdoinmatkhau {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 1px solid #ccc;
+            padding: 50px 70px;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 380px;
+        }
+
+        #formdoinmatkhau h1 {
+            color: black;
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            margin-bottom: 20px;
+            margin-top: -1rem;
+        }
+
+        #formdoinmatkhau table {
+            width: 100%;
+            text-align: left;
+        }
+
+        #formdoinmatkhau table tr td {
+            padding: 8px 0;
+            font-size: 16px;
+            color: black;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        #formdoinmatkhau input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+            font-size: 15px;
+        }
+
+        /* Hàng chứa 2 nút */
+        .btn-group {
+            text-align: center;
+            padding-top: 20px;
+        }
+
+        .btn-group button {
+            padding: 10px 25px;
+            margin: 0 10px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 120px;
+            height: 40px;
+            color: white;
+            transition: 0.3s;
+        }
+
+        #btn_thoat {
+            background-color: #6c757d;
+        }
+
+        #btn_thoat:hover {
+            background-color:red;
+        }
+
+        #btn_dangnhap {
+            background-color: #007bff;
+            width: 130px;
+
+        }
+
+        #btn_dangnhap:hover {
+            background-color: #0056b3;
+        }
+
+
+
+/*******************
+FORM NHẬP CODE
+********************/
+  #form_nhap_code {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: 1px solid #ccc;
+      padding: 50px 70px;
+      border-radius: 10px;
+      background-color: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 380px;
+    }
+
+    #form_nhap_code h1 {
+      color: black;
+      text-align: center;
+      font-family: 'Times New Roman', Times, serif;
+      margin-bottom: 20px;
+      margin-top: -1rem;
+    }
+
+    #form_nhap_code table {
+      width: 100%;
+      text-align: left;
+    }
+
+    #form_nhap_code table tr td {
+      padding: 8px 0;
+      font-size: 16px;
+      color: black;
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+    #form_nhap_code input[type="text"] {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #aaa;
+      border-radius: 5px;
+      font-size: 15px;
+    }
+
+    .btn-right {
+      text-align: right;
+      padding-top: 10px;
+    }
+
+    #verify-btn {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 25px;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    #verify-btn:hover {
+      background-color: #0056b3;
+    }
+
+    #verify-btn::after {
+      content: " ➜";
+      font-weight: bold;
+    }
